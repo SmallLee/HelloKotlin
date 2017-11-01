@@ -1,0 +1,16 @@
+1.
+var代表的是variable，声明变量
+val定义常量，代表的是value,不可重新赋值，用来声明常量
+不同的数据类型用不同的容器保存
+kotlin会自动推断类型
+可以用:来显示指定数据类型
+2.Kotlin中没有8进制，十六进制以0x开头，二进制以0b开头
+
+3.命令行编译kotlin
+    a:下载编译工具
+    b:配置bin目录到环境变量，打开控制台，
+    进入需要编译的kotlin文件路径，输入kotlinc BooleanTest.kt -include-runtime -d boolean.jar
+    然后运行 java -jar boolean.jar
+
+    进入kotlin的shell
+    输入kotlinc,就可以进入kotlin的Shell环境，退出使用:quit

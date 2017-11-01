@@ -7,4 +7,5 @@ fun main(args : Array<String>) {
     //显示指定数据类型，可以不赋初始值
 //    var a//需要给初始值，否则报错
     var age : Int
+    val number = "NO.123";
 }
