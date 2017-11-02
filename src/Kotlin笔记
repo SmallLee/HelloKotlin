@@ -1,6 +1,6 @@
 1.
-var代表的是variable，声明变量
-val定义常量，代表的是value,不可重新赋值，用来声明常量
+var代表的是variable，声明变量,变量下面有个下划线
+val定义常量，代表的是value,不可重新赋值，用来声明常量，常量没有下划线
 不同的数据类型用不同的容器保存
 kotlin会自动推断类型
 可以用:来显示指定数据类型
@@ -14,3 +14,23 @@ kotlin会自动推断类型
 
     进入kotlin的shell
     输入kotlinc,就可以进入kotlin的Shell环境，退出使用:quit
+
+4.函数格式
+fun 函数名(参数名:参数类型):Unit{
+}
+参数类型可是是以下几种类型
+基本类型
+byte,short,int,long,float,double
+字符串String
+数组Array
+Unit是函数的返回值，若没有返回值，可以省略Unit
+
+5.字符串模版表达式($名称)
+
+fun generator(name:String):String{
+    return "My name is $name ,Hello $name,名字的长度是${name.length}";
+}
+可以使用$参数名,获得变量的值，如果要获得变量的属性，需要用大括号括起来
+
+6.条件控制
+    if...else中，如果if或者else中只有一条代码，则大括号可以省略
