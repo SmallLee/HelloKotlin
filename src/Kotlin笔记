@@ -34,3 +34,26 @@ fun generator(name:String):String{
 
 6.条件控制
     if...else中，如果if或者else中只有一条代码，则大括号可以省略
+7.字符串比较
+    在kotlin中，==等同于equals,如果要不区分大小写比较，用equals(str,boolean ignoreCase)方法
+
+8.空处理
+    //参数接受非空的值
+    fun heat(str:String):String{
+        return "热"+str;
+    }
+    heat(null)编译时报错
+    要想不是非空的，可以在参数后面加一个?
+    fun heat(str:String?):String{
+            return "热"+str;
+        }
+   9.when(类似于java中的switch)
+   when(变量){
+        1 -> 执行语句一;
+        2 -> 执行语句二;
+        else -> 上面情况都不满足时执行的语句
+   }
+
+   10.区间
+    1..10    [1,10]
+    1 until 10   [1,10)
