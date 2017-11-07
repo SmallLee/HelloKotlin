@@ -77,6 +77,6 @@ fun generator(name:String):String{
      14.变量后面跟?表示可能为空,跟!!表示一定不为
 
     15.异常处理
-        try{
+        try{ 
         } catch(e:Exception){
         }
