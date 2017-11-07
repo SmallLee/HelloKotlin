@@ -67,3 +67,16 @@ fun generator(name:String):String{
         var j:(Int,Int) -> Int = {x,y -> x + y}
     12.具名参数
         给函数的实参赋上形参
+       默认参数
+        给函数的形参附上值
+
+    13.字符串和数字相互转化
+        数字转字符串：toString
+        字符串转数字：toInt
+
+     14.变量后面跟?表示可能为空,跟!!表示一定不为
+
+    15.异常处理
+        try{
+        } catch(e:Exception){
+        }
