@@ -3,4 +3,4 @@ fun main(args: Array<String>) {
     println(rectangle.width)//10
     println(rectangle.height)//20
 }
-class Rectangle(var width:Int,var height:Int);
+class Rectangle(var width:Int,var height:Int); 
