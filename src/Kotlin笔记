@@ -92,3 +92,15 @@ fun generator(name:String):String{
 
        类中的属性必须赋值，否则编译报错
 
+     17.抽象类和接口
+        抽象类代表的是事务的本质
+        接口代表的是事物的功能
+
+     通过by关键字可以实现委托和代理
+     //把接口的功能实现交给by后面的对象
+     class SmallHeadFather : IWashBowl by BigHeadSon()
+
+     18.当把类的声明有class变为object时，类就变为了单例，在内存中有且只有一个
+
+     19.定义枚举使用enum class
+
