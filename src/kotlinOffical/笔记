@@ -1,0 +1,19 @@
+1.Kotlin默认会导入一些包
+kotlin.*
+kotlin.annotation.*
+kotlin.collections.*
+kotlin.comparisons.* (since 1.1)
+kotlin.io.*
+kotlin.ranges.*
+kotlin.sequences.*
+kotlin.text.*
+如果在其他平台中
+JVM:
+java.lang.*
+kotlin.jvm.*
+JS:
+kotlin.js.*
+2.如果两个包下的类名冲突，在导入的时候可以使用as关键字区分开
+import foo.Bar // Bar is accessible
+import bar.Bar as bBar // bBar stands for 'bar.Bar'
+kotlin没有import static
