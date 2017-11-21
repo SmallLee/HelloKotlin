@@ -17,3 +17,16 @@ kotlin.js.*
 import foo.Bar // Bar is accessible
 import bar.Bar as bBar // bBar stands for 'bar.Bar'
 kotlin没有import static
+
+3.全局变量不管是否指定类型，必须初始化
+    局部变量如果指定类型，可以不用初始化，否则也得初始化
+4.kotlin中多行注释可以嵌套
+5.kotlin没有三元运算符，用下面的代替
+if(a>b) a else b;
+//参数可以为空，下面三个❓缺一不可
+6.fun parseInt(str:String?):Int?{
+      return str?.toInt();
+}
+7.kotlin中字符串不能和其他类型数据拼接，这时候可以使用字符串模版
+8.a.rangeTo(10)可以简写为a..10
+9.a in b downto c,如果b小于c，则a无法获得值
