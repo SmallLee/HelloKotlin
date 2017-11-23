@@ -100,7 +100,7 @@ fun generator(name:String):String{
      //把接口的功能实现交给by后面的对象
      class SmallHeadFather : IWashBowl by BigHeadSon()
 
-     18.当把类的声明有class变为object时，类就变为了单例，在内存中有且只有一个
+     18.当把类的声明由class变为object时，类就变为了单例，在内存中有且只有一个
 
      19.定义枚举使用enum class
 

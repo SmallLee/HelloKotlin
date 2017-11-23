@@ -30,3 +30,23 @@ if(a>b) a else b;
 7.kotlin中字符串不能和其他类型数据拼接，这时候可以使用字符串模版
 8.a.rangeTo(10)可以简写为a..10
 9.a in b downto c,如果b小于c，则a无法获得值
+
+10.中缀表示法调用函数，必须满足下面的条件
+    a:成员函数或者是扩展函数
+    b:只有一个参数
+    c:使用infix关键字标记
+    infix fun Int.add(x:Int):Int{
+        return x+this;
+    }
+    调用方法
+        1 add 2 或者1.add(2)
+11.kotlin中有四种可见性修饰符
+    private,protected,internal,public,默认是public
+12.构造函数中的参数若不使用var或者val修饰，默认是val
+只有主构造函数的参数可以使用var或val修饰,因为主构造函数是类头的一部分
+在这里直接声明属性使得属性的声明变得很方便、简洁
+
+13.操作变量时，和java中不同，操作的是变量隐式的get和set方法,写法如下
+ var sex:Int = 0
+    get() = field
+    set(value){field = value}

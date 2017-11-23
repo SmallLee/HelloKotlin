@@ -13,7 +13,7 @@ fun main(args:Array<String>){
     }
 //    demo()
     demo2();
-    letDemo();
+    letDemo { println("adf") }
 }
 fun demo(){
     var items = listOf<String>("orange","banana","apple");
@@ -28,9 +28,11 @@ fun demo2(){
     fruits.sortedBy { it}.forEach { println(it)}
 }
 
-fun letDemo(){
-    "letDemo".let {
+fun <T> letDemo(body:()->T){
+    var b = "letDemo".let {
         println(it)
         print(33)
     }
+    println(b)//kotlin.Unit
+//    return body();
 }
