@@ -48,5 +48,38 @@ if(a>b) a else b;
 
 13.操作变量时，和java中不同，操作的是变量隐式的get和set方法,写法如下
  var sex:Int = 0
-    get() = field
+    get() = field要
     set(value){field = value}
+
+14.data class 用来保存数据的类，编译器会自动为我们生成一些方法
+equals/hashcode/componentN(对应主构造函数的每个属性对应的值)/copy
+
+data class类要求：
+    a：主构造函数至少要有一个参数
+    b:主构造函数的参数必须用var或者val修饰
+    c:不能是abstract, open, sealed or inner
+    d:(1.1之前)只能实现接口
+
+copy函数的定义如下
+fun copy(name: String = this.name, age: Int = this.age) = DataClass(name, age)
+用法
+ var dc1 = DataClass(name = "jack",age = 22);
+    var oldDc = dc1.copy(name = "mike",age = 23);
+    println(oldDc.name)//mike
+    println(oldDc.age)//23
+
+15.默认参数和具名参数
+    默认参数：给函数的参数赋上默认的值，此时如果调用此函数，可以不给此参数赋值，此时参数取默认值
+    具名参数： foo(age = 2,name = "bb");
+
+16.属性延迟加载
+    第一次调用执行lazy（）中的lambda表达式，并返回值，以后调用直接返回记录的值
+
+17.扩展函数
+扩展函数数是指在一个类上增加一种新的行为，甚至我们没有这个类代码的访问权限。
+这是一个在缺少有用函数的类上扩展的方法，Kotlin能够为我们做到那些令人关注的事情，而这些Java做不到。
+在Java中，通常会实现很多带有static方法的工具类，而Kotlin中扩展函数的一个优势是我们不需要在
+调用方法的时候把整个对象当作参数传入，它表现得就像是属于这个类的一样，而且我们可以使用
+this关键字和调用所有public方法。
+
+
