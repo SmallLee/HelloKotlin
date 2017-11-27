@@ -82,4 +82,9 @@ fun copy(name: String = this.name, age: Int = this.age) = DataClass(name, age)
 调用方法的时候把整个对象当作参数传入，它表现得就像是属于这个类的一样，而且我们可以使用
 this关键字和调用所有public方法。
 
+18.防止空指针异常
+    var data = File("aa").listFiles();
+    println(data?.size)//null
+    println(data?.size ?: "empty")//null
+
 
