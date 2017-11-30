@@ -13,5 +13,8 @@ public class TestNumber {
         System.out.println(b1==b2);//true
         //=============================
         System.out.println(1<<2);
+        Object[] arr = {2,3,4};
+        Integer[] brr = {1,2,3,4};
+        arr = brr;
     }
 }
