@@ -160,6 +160,32 @@ fun generator(name:String):String{
          密封类
             使用sealed class 关键字修饰类
 
+            object表达式和声明
+                用来表示匿名内部类，object只能用在局部和私有的声明上，如果用在public声明上，
+                实际的返回类型是匿名内部类的父类，如果你不定义父类，则是Any类型
+
+             匿名内部类中的变量访问外部变量不用带final(这里和java不同)
+
+             fun countClicks(window: JComponent) {
+                 var clickCount = 0
+                 var enterCount = 0
+
+                 window.addMouseListener(object : MouseAdapter() {
+                     override fun mouseClicked(e: MouseEvent) {
+                         clickCount++
+                     }
+
+                     override fun mouseEntered(e: MouseEvent) {
+                         enterCount++
+                     }
+                 })
+             }
+
+          代理模式
+            代理类，使用by关键字
+            
+
+
 
 
 
